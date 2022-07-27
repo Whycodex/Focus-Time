@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     padding: spacing.lg,
-    justifyContent: 'TOP',
+    justifyContent: 'center',
     flexDirection: 'row',
   },
 });

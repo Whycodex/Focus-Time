@@ -20,7 +20,7 @@ export const FocusHistory = ({ history }) => {
 const styles = StyleSheet.create({
   container: {
     padding: spacing.md,
-    fllex: 1,
+    flex: 1,
   },
   item: {
     fontSize: fontSizes.md,
