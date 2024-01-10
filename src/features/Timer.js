@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Platform, Vibration } from 'react-native';
+import { View, StyleSheet, Text, Vibration } from 'react-native';
 import { ProgressBar } from 'react-native-paper';
 import { useKeepAwake } from 'expo-keep-awake';
 import { Countdown } from '../components/Countdown';
@@ -47,7 +47,7 @@ export const Timer = ({ focusSubject, clearSubject, onTimerEnd }) => {
       <View style={{ paddingTop: spacing.sm }}>
         <ProgressBar
           progress={progress}
-          color={colors.ProgressBar}
+          color={colors.white}
           style={{ height: spacing.sm }}
         />
       </View>
@@ -56,14 +56,14 @@ export const Timer = ({ focusSubject, clearSubject, onTimerEnd }) => {
       </View>
       <View style={styles.buttonWrapper}>
         {!isStarted && (
-          <RoundedButton title="start" onPress={() => setIsStarted(true)} />
+          <RoundedButton title="Start" onPress={() => setIsStarted(true)} />
         )}
         {isStarted && (
-          <RoundedButton title="pause" onPress={() => setIsStarted(false)} />
+          <RoundedButton title="Pause" onPress={() => setIsStarted(false)} />
         )}
       </View>
       <View style={styles.clearSubjectWrapper}>
-        <RoundedButton size={50} title="-" onPress={clearSubject} />
+        <RoundedButton size={50} title="Back" onPress={clearSubject} />
       </View>
     </View>
   );
